@@ -9,7 +9,16 @@
 }
 .logo {
 display: block;
+    
 }
-.grid-container-white {
+.grid-container-white, .grid-container-white a {
     background-color: green;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+
 }
