@@ -32,4 +32,27 @@ function doTheThing() {
     }
 }
 
+function fuck() {
 
+    var a = 0;
+    var b = 0;
+    var c = 0;
+
+    while (a < 10) {
+        a++;
+
+        console.log("1");
+        while (b < 10){
+            b++;
+
+            console.log("2");
+            while (c < 10){
+
+                console.log("3");
+                c++;
+            }
+        }
+    }
+}
+
+fuck();

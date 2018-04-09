@@ -1,0 +1,48 @@
+
+/*todo make the media query break to 766px*/
+
+body {
+    /*height: 100%;*/
+
+    background-size: cover;
+    background: #696969 url("../img/cross-background.jpg") no-repeat center center;
+    background-attachment: fixed;
+}
+.header-wrapper {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    height: 13vh;
+}#cross {
+     height: 8vh;
+    align-self: center;
+ }
+#name-wrapper {
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    margin-left: 3vw;
+    justify-content: space-between;
+    width: 90vw;
+}
+.name {
+    text-decoration: none;
+    color: white;
+   text-align: center;
+}
+#hamburger {
+    height: 6vh;
+    width: auto;
+
+}
+
+/*main body*/
+
+
+#wrapper {
+
+
+
+}
+
+
