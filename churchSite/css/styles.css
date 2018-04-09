@@ -1,12 +1,9 @@
 
 /*todo make the media query break to 766px*/
 
-body {
-    /*height: 100%;*/
-
-    background-size: cover;
-    background: #696969 url("../img/cross-background.jpg") no-repeat center center;
-    background-attachment: fixed;
+ html, body {
+     font-family: "Trebuchet MS", Verdana, sans-serif;
+    background-color: #696969;
 }
 .header-wrapper {
     background-color: black;
@@ -33,16 +30,43 @@ body {
 #hamburger {
     height: 6vh;
     width: auto;
-
 }
-
 /*main body*/
-
-
 #wrapper {
-
-
-
+    background: #696969 url("../img/cross-background.jpg");
+    height: 86vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+#hero {
+    color: white;
+    font-size: 2vh;
+}
+#hero > h2 {
+    font-size: 5vh;
+    color: darkgrey;
+}
+#hero > p {
+    background: rgba(204, 204, 204, 0.5);
+    padding: .5vw;
+}
+#address {
+    font-size: 1vh;
+    text-align: center;
+    color: darkgrey;
+    display: flex;
+    flex-direction: column;
 
-
+ }
+#address > h2 {
+    color: white;
+}
+#address > p {
+    width: 99.5%;
+}
