@@ -4,6 +4,7 @@
  html, body {
      font-family: "Trebuchet MS", Verdana, sans-serif;
     background-color: #696969;
+     margin: 0;
 }
 .header-wrapper {
     background-color: black;
@@ -27,6 +28,33 @@
     color: white;
    text-align: center;
 }
+#menu {
+    display: none;
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    background-color: #696969;
+    position: absolute;
+    justify-self: stretch;
+    margin-top: 13vh;
+    margin-left: 2.5vh;
+    padding-bottom: 2vh;
+    justify-items: center;
+
+    /*todo figure out why the menu text is pushed all the way right*/
+}
+
+#menu > hr {
+    width: 90%;
+}
+.menu-items {
+    color: lightgray;
+    font-size: 5vh;
+    text-align: center;
+    text-decoration: none;
+
+
+}
 #hamburger {
     height: 6vh;
     width: auto;
@@ -34,7 +62,7 @@
 /*main body*/
 #wrapper {
     background: #696969 url("../img/cross-background.jpg");
-    height: 86vh;
+    height: 87vh;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +85,7 @@
     padding: .5vw;
 }
 #address {
-    font-size: 1vh;
+    font-size: 2vh;
     text-align: center;
     color: darkgrey;
     display: flex;
@@ -69,4 +97,73 @@
 }
 #address > p {
     width: 99.5%;
+}
+
+@media screen and (min-width:750px) {
+
+    body {
+
+    }
+
+    .header-wrapper{
+        display: none;
+    }
+    #wrapper {
+        /*background-image: none;*/
+        height: 100vh;
+    }
+
+    .name {
+        display: flex;
+    }
+    #address {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 2vh;
+        font-size: 2vh;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        justify-self: center;
+        box-sizing: content-box;
+
+    }
+    #address > p {
+        flex-grow: 1;
+        align-self: flex-end;
+        width: auto;
+
+
+    }
+    #time-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .times {
+
+        flex-grow: 1;
+    }
+
+    #address > h2 {
+        align-items: center;
+        font-size: 4vh;
+    }
+    #email {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        background-color: #696969;
+        position: absolute;
+        justify-self: stretch;
+        margin-top: 13vh;
+        margin-left: 2.5vh;
+        padding-bottom: 2vh;
+    }
+/*todo add the church name into the join us section and make it hidden mobile*/
 }

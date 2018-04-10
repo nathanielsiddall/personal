@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> <!--todo figure out what a good title is--> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Come to church!</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -10,8 +11,17 @@
         <div class="header-wrapper">
             <div id="name-wrapper">
                 <img id="cross" class="name" src="img/cross.png" alt="Cross">
-                <a class="name" href="#"> <h1 class="name"><!--todo add a church name here-->Faith Baptist Church</h1></a>
+                <a class="name" href="#"> <h1 class="name">Faith Baptist Church</h1></a>
                 <img id="hamburger" src="img/hamburger.png" alt="Menu-Icon">
+            </div>
+            <div id="menu">
+                    <a class="menu-items" href="">About Us</a>
+                <hr><a class="menu-items" href="">Our Ministries</a>
+                <hr><a class="menu-items" href="">News & Events</a>
+                <hr><a class="menu-items" href="">Sermons</a>
+                <hr><a class="menu-items" href="">Going to Heaven?</a>
+                <hr><a class="menu-items" href="">Missionaries</a>
+                    <a class="menu-items" href=""></a>
             </div>
         </div>
     </header>
@@ -25,22 +35,25 @@
             </div>
         </div>
         <div id="address">
-            <h2>Join Us</h2>
-            <p>
+          <h2>Join Us</h2>
+                <p>
                 1208 S. WW White Rd. - San Antonio Texas 78220
+                </p>
+            <div id="email">
                 pastormartin@faith2you.com
-            </p>
-            <p>
-            <div id="ss">Sunday 10:00am – Bible Study Hour</div>
-            <div id="service">Sunday 11:00am – Morning Worship Service</div>
-            <div id="evening">Sunday 7:00pm – Evening Worship Service</div>
-            <div id="wed">Wednesday 7:00pm – Prayer and Worship Service</div>
-            </p>
+            </div>
+            <div id="time-box">
+            <div class="times" id="ss">Sunday 10:00am – Bible Study Hour</div>
+            <div class="times" id="service">Sunday 11:00am – Morning Worship Service</div>
+            <div class="times" id="evening">Sunday 7:00pm – Evening Worship Service</div>
+            <div class="times" id="wed">Wednesday 7:00pm – Prayer and Worship Service</div>
+            </div>
         </div>
     </main>
     <footer>
         <div id="footer-wrapper"></div>
     </footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
