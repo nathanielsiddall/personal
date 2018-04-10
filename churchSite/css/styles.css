@@ -1,5 +1,4 @@
 
-/*todo make the media query break to 766px*/
 
  html, body {
      font-family: "Trebuchet MS", Verdana, sans-serif;
@@ -39,9 +38,12 @@
     margin-top: 13vh;
     margin-left: 2.5vh;
     padding-bottom: 2vh;
+    padding-top: 1vh;
     justify-items: center;
 
-    /*todo figure out why the menu text is pushed all the way right*/
+    /*todo figure out why the menu text is pushed all the way left*/
+    /*todo add the menu div to the full size screen
+    */
 }
 
 #menu > hr {
@@ -52,6 +54,7 @@
     font-size: 5vh;
     text-align: center;
     text-decoration: none;
+    margin-left: 5vw;
 
 
 }
@@ -109,7 +112,6 @@
         display: none;
     }
     #wrapper {
-        /*background-image: none;*/
         height: 100vh;
     }
 
@@ -123,7 +125,7 @@
         margin-bottom: 2vh;
         font-size: 2vh;
         flex-direction: row;
-        align-items: flex-start;
+        align-content: flex-start;
         justify-content: space-around;
         justify-self: center;
         box-sizing: content-box;
@@ -154,16 +156,24 @@
     }
 
     #menu {
+        position: static;
+        width: auto;
         display: flex;
-        flex-direction: column;
-        width: 90vw;
-        height: auto;
-        background-color: #696969;
-        position: absolute;
-        justify-self: stretch;
-        margin-top: 13vh;
-        margin-left: 2.5vh;
-        padding-bottom: 2vh;
+        flex-direction: row;
+        align-self: flex-start;
+        margin: 0;
+        justify-self: flex-end;
+        justify-content: space-evenly;
+
+    }
+    #menu > hr {
+        display: none;
+
+    }
+
+    .menu-items {
+        font-size: 1.5vh;
+        align-self: center;
     }
 /*todo add the church name into the join us section and make it hidden mobile*/
 }
