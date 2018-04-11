@@ -41,9 +41,7 @@
     padding-top: 1vh;
     justify-items: center;
 
-    /*todo figure out why the menu text is pushed all the way left*/
-    /*todo add the menu div to the full size screen
-    */
+
 }
 
 #menu > hr {
@@ -101,6 +99,8 @@
 #address > p {
     width: 99.5%;
 }
+
+/*Full Screen options*/
 
 @media screen and (min-width:750px) {
 
