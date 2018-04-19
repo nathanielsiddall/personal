@@ -1,0 +1,24 @@
+body {
+    background-color: #696969;
+}
+
+#wrapper {
+    display: flex;
+}
+
+.flex-row {
+    width: 100%;
+    display: flex;
+}
+.grow {
+    flex-grow: 1;
+    margin-bottom: 2vh;
+
+}
+
+
+#body {
+    height: 10vh;
+
+
+}

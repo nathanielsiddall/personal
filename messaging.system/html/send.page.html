@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/sendpage.css">
+</head>
+<body>
+<form method="POST" action="">
+    <div class="flex-row">
+        <label for="to">Reciever name: </label>
+        <input class="grow" id="to" name="to" type="text" required>
+    </div>
+    <div class="flex-row">
+        <label for="subject">Subject: </label>
+        <input class="grow" id="subject" name="subject" type="text">
+    </div>
+
+    <div class="flex-row">
+        <label for="body">Body: </label>
+        <textarea name="body" id="body" cols="30" rows="10" required></textarea>
+    </div>
+
+    <button>Send</button>
+</form>
+
+</body>
+</html>
