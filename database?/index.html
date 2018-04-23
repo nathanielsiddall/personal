@@ -6,28 +6,55 @@
 </head>
 <body>
 
+
+
+
+<div id="databox"></div>
+<form action="">
+    <input id="name" type="text">
+    <input id="address" type="text">
+    <input id="id" type="text">
+</form>
+<button id="clicker"></button>
+
+
+
+
+<!--todo finish wiring up the inputs to the object. see if you can create new json files.-->
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 
-    function download(content, fileName, contentType) {
+function download(content, fileName, contentType) {
         var a = document.createElement("a");
         var file = new Blob([content], {type: contentType});
         a.href = URL.createObjectURL(file);
         a.download = fileName;
         a.click();
     }
-    // download(jsonData, 'json.txt', 'text/plain');
+
+$("#clicker").click(function () {
+    var person =
+        {
+            name: "bubba",
+            address: "101 south main",
+            id: "1234"
+        };
+
+    var thing =JSON.stringify(person);
+
+    console.log(thing);
+
+
+    download(thing, 'json.json', 'text/plain')
+});
 
 
 
 
 
-    var person =[ {
-        name: "bubba",
-        address: "101 south main",
-        id: "1234"
-    }];
-    console.log(person);
-    // download(person, 'json.json', 'text/plain')
 </script>
 </body>
 </html>
