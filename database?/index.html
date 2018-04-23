@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function download(content, fileName, contentType) {
+        var a = document.createElement("a");
+        var file = new Blob([content], {type: contentType});
+        a.href = URL.createObjectURL(file);
+        a.download = fileName;
+        a.click();
+    }
+    // download(jsonData, 'json.txt', 'text/plain');
+
+
+
+
+
+    var person =[ {
+        name: "bubba",
+        address: "101 south main",
+        id: "1234"
+    }];
+    console.log(person);
+    // download(person, 'json.json', 'text/plain')
+</script>
+</body>
+</html>
