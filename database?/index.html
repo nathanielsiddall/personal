@@ -9,24 +9,78 @@
 
 
 
-<div id="databox"></div>
+<div id="data-box"></div>
 <form action="">
-    <input id="name" type="text">
-    <input id="address" type="text">
-    <input id="id" type="text">
+    <input class="inputs" id="name" type="text">
+    <input class="inputs" id="address" type="text">
+    <input class="inputs" id="id" type="text">
 </form>
-<button id="clicker"></button>
+<button id="clicker">click here to load the array</button>
+<button id="submit">click here to create the db file</button>
 
 
 
 
-<!--todo finish wiring up the inputs to the object. see if you can create new json files.-->
 
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 
+    // TODO refactor this into a function that will load,
+    // push and pull without it having to do the row at once,
+   //preferably with ES6 script. what i'm looking for is a
+    // function i can call at my leaisure that will preform the
+    // action and the information about the file name(db name)
+    // table name, row name and cell name can all be inputed
+    // dynamically throught the GUI.
+
+    var fileName = "data" + ".json";
+    var db = [];//this is the thing that holds the data coming off
+    //the json file and holds the data getting pushed.
+
+    var dbid = 0;//this is supposed to be the counter that holds the
+    //id number. this needs to be refactored so that it can be
+    // done as an option.
+
+    t//this pulls the data off the json file and stacks
+    // it into the array for use.
+    function loadData(fileName) {
+        fetch(fileName)
+            .then(function (data) {
+                return data.json();
+            })
+            .then(function (data) {
+
+                data.forEach(function (data) {
+
+                    var name = data.name;
+                    var address = data.address;
+                    var id = data.id;
+                    dbid = data.id;
+                    var person =
+
+                        {
+                            name: name,
+                            address: address,
+                            id: id
+                        };
+                    db.push(person);
+                    console.log(db);
+                    console.log(dbid);
+
+                       // this dynamicly creates the html
+                      // list of names and people
+                    $("#data-box").append("<h1>" + "Name: " + data.name + "</h1>"
+                    + "<p>"+ "Address: " + data.address +"</p>" + "<p>"+ "id: " + data.id +"</p>"
+                    );
+
+                })
+
+            })
+    }
+
+//this is what creates and auto downloads the new json file.
 function download(content, fileName, contentType) {
         var a = document.createElement("a");
         var file = new Blob([content], {type: contentType});
@@ -35,22 +89,46 @@ function download(content, fileName, contentType) {
         a.click();
     }
 
-$("#clicker").click(function () {
-    var person =
-        {
-            name: "bubba",
-            address: "101 south main",
-            id: "1234"
-        };
 
-    var thing =JSON.stringify(person);
+//this is what takes the data ffrom the inputs
+    // and pushes it to the array
+    var idCnt = dbid;
+    $("#clicker").click(function () {
+        $("#data-box").empty();
+        var name = $("#name").val();
+        var address = $("#address").val();
+        var id = $("#id").val();
+        var person =
 
+            {
+                name: name,
+                address: address,
+                id: idCnt
+            };
+        db.push(person);
+        console.log(db);
+        idCnt++;
+
+        $("#data-box").append("<h1>" + "Name: " + db.name + "</h1>"
+            + "<p>"+ "Address: " + db.address +"</p>" + "<p>"+ "id: " + db.id +"</p>"
+        );
+
+    });
+
+//when this button is clicked it takes the data staged
+    // at the previous section and pushes it all to download();
+    //which causes it to be saved, along with the original data
+    //to a new file.
+$("#submit").click(function () {
+
+    var thing =JSON.stringify(db);
     console.log(thing);
-
-
-    download(thing, 'json.json', 'text/plain')
+    download(thing, fileName, 'text/plain')
 });
 
+
+//this is what initially loads data to the page.
+loadData("data/data.json");
 
 
 
